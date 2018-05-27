@@ -7,13 +7,15 @@ public class Base {
         int nums[] = new int[20];
         int minPos;
         int maxNeg;
-        int minInd = 0;
-        int maxInd = 0;
+        int minInd;
+        int maxInd;
         System.out.println("Создаем массив из 20ти случайных чисел от -10 до 10.");
         //пишем массив чисел, на ходу выясняем максимальное и минимальное, выводим
         do {
             maxNeg = -99;
             minPos = 99;
+            maxInd = 0;
+            minInd = 0;
             System.out.print("Начальный состав массива: {");
             for (int x = 0; x < 20; x++) {
                 nums[x] = (int) (Math.random() * 21) - 10;
